@@ -1,0 +1,42 @@
+<div id="content"
+     ng-style="{width: contentWidth}"
+     ng-controller="contentController">
+
+    <ul>
+        <li ng-repeat="item in items" ng-click="clickItem()">
+
+            <div class="page">
+
+                <div class="title">
+                    <img ng-src="{{favicon(item.url)}}" onerror="this.src='assets/images/favicon.png';">
+                    <a href="{{item.url}}" target="_blank" title="{{item.url}}">{{item.title + "  "  + item.main}}</a>
+                </div>
+
+                <div class="text" ng-show="showText">
+                    {{item.text.substring(0, (item.wordsCount/10 > 300 ? item.wordsCount/10 : 300))}}
+                </div>
+
+                <div class="categories" ng-show="showCategories">
+                    <span ng-repeat="category in item.categories.split(',')">
+                        <a ng-click="selectOneCategory(category)">{{category}}</a>,
+                        <!--{{$last ? '' : ', '}}-->
+                    </span>
+                    <span>
+                       <a ng-click="moreCategories()">more..</a>
+                    </span>
+                </div>
+
+                <div class="stat" ng-style="{'width': item.wordsCount/40 + 'px'}"></div>
+
+            </div>
+
+            <div class="image"
+                 ng-show="showImage && item.image.length > 0"
+                 ng-style="{'background-image': 'url(' + item.image + ')', 'flex': '0 0 ' + (item.wordsCount/40 < 100 ? 100 : item.wordsCount/40) + 'px'}">
+                <!--(item.wordsCount/40 < 10 ? 10 : item.wordsCount/40)-->
+            </div>
+
+        </li>
+    </ul>
+
+</div>

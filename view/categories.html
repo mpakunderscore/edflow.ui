@@ -1,0 +1,34 @@
+<div id="categories"
+     ng-style="{width: menuWidth}"
+     ng-controller="categoriesController">
+
+    <ul ng-style="{top: categoriesTop}">
+
+        <!--<li ng-repeat="item in selectedCategories">-->
+            <!--<a ng-click="deselectCategory(item)" class="selected">{{item.title}}</a>-->
+        <!--</li>-->
+
+        <!--<li ng-repeat="item in subCategories">-->
+            <!--<a ng-click="selectCategory(item)">{{item.title}}</a>-->
+        <!--</li>-->
+
+        <li ng-repeat="item in categories">
+            <a ng-click="selectCategory(item)" ng-style="item.selected && {'color':'red'} || {'color': 'black'}" >{{item.title}}</a>
+        </li>
+
+        <!--data-ui-sref="app"-->
+
+        <!--data-ui-sref="{{item.title}}"-->
+
+
+        <!--<li ng-repeat="item in selectedCategories">-->
+        <!--<a ng-click="deselectCategory(item)" class="selected">{{item.title}}</a>-->
+        <!--</li>-->
+
+        <!--<li ng-repeat="item in categories">-->
+            <!--<a ng-click="selectCategory(item)">{{item.title}}</a>-->
+        <!--</li>-->
+
+    </ul>
+
+</div>

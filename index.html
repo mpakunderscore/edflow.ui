@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html data-ng-app="edflow" data-ng-controller="edflowController as edflow">
+    <head>
+
+        <meta charset="utf-8">
+
+        <base href="/">
+
+        <title>Learned</title>
+
+        <script src="./javascripts/libs/jquery-1.9.0.min.js" type="text/javascript"></script>
+        <script src="./javascripts/libs/angular.min.js" type="text/javascript"></script>
+        <script src="./javascripts/libs/angular-ui-router.min.js" type="text/javascript"></script>
+        <script src="./javascripts/libs/angular-sanitize.js" type="text/javascript"></script>
+
+        <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.js"></script>-->
+
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel='stylesheet' type='text/css'>
+        <!--<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+        <link rel="stylesheet" media="screen" href="./stylesheets/index.css">
+        <link rel="stylesheet" media="screen" href="./stylesheets/controllers/categories.css">
+        <link rel="stylesheet" media="screen" href="./stylesheets/controllers/menu.css">
+        <link rel="stylesheet" media="screen" href="./stylesheets/controllers/chat.css">
+
+        <link rel="stylesheet" media="screen" href="./stylesheets/controllers/data/content.css">
+        <!--<link rel="stylesheet" media="screen" href="./stylesheets/controllers/data/words.css">-->
+
+        <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
+
+        <script src="./javascripts/app.js" type="text/javascript"></script>
+        <script src="./javascripts/config.js" type="text/javascript"></script>
+        <script src="./javascripts/edflowController.js" type="text/javascript"></script>
+
+        <script src="./javascripts/controllers/categoriesController2.js" type="text/javascript"></script>
+        <script src="./javascripts/controllers/menuController.js" type="text/javascript"></script>
+        <script src="./javascripts/controllers/chatController.js" type="text/javascript"></script>
+
+        <script src="./javascripts/controllers/data/contentController.js" type="text/javascript"></script>
+
+
+        <script src="./javascripts/ga.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <div ng-include="'./view/menu.html'"></div>
+        <div ng-include="'./view/categories.html'"></div>
+        <div ng-include="'./view/chat.html'"></div>
+
+        <!--<data ui-view></data>-->
+
+        <data><div ng-include="'./view/data/content.html'"></div></data>
+
+        <div id="circle" ng-style="{'left': circleLeft}" ng-class="circleAnimation" ng-click="circle()"></div>
+    </body>
+</html>
