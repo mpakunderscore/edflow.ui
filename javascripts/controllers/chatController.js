@@ -2,15 +2,15 @@ edflow
 
     .controller("chatController", function ($scope, $rootScope, $http, $state) {
 
-        // $scope.chatItems = [
-        //     {name: "Robot", message: "Hello. This is a link recommendation system."},
-        //     {name: "Robot", message: "Main - list of newly added links. Flows is a sources for links. And not only domains, but all pages where i can find updatable list. Mine is a your links."},
-        //     {name: "Robot", message: "and this is me. I will recommend links for you and even can interact with you via this chat. You should feed me. The more i eat, the better recommendations will be. Throw links here or use chrome extension."}
-        // ];
-
         $scope.chatItems = [
-            {name: "Wiki", message: "Suprematism (Russian: Супремати́зм) is an art movement, focused on basic geometric forms, such as circles, squares, lines, and rectangles, painted in a limited range of colors."}
+            {name: "Robot", message: "Hello. This is a link recommendation system."},
+            {name: "Robot", message: "Main - list of newly added links. Flows is a sources for links. And not only domains, but all pages where i can find updatable list. Mine is a your links."},
+            {name: "Robot", message: "and this is me. I will recommend links for you and even can interact with you via this chat. You should feed me. The more i eat, the better recommendations will be. Throw links here or use chrome extension."}
         ];
+
+        // $scope.chatItems = [
+        //     {name: "Wiki", message: "Suprematism (Russian: Супремати́зм) is an art movement, focused on basic geometric forms, such as circles, squares, lines, and rectangles, painted in a limited range of colors."}
+        // ];
 
         $scope.placeholder = "";
 

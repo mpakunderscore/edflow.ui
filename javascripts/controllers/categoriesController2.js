@@ -15,10 +15,10 @@ edflow
         $rootScope.categoriesTop = "calc(50% - 26px)";
 
         $rootScope.categories = [
-            {title: "ML", name: "Главная"},
-            {title: "Web", name: "Потоки"},
-            {title: "DevOps", name: "Робот"},
-            // {title: "Mine", name: "Мое"}
+            {title: "Main", name: "Главная"},
+            {title: "Flows", name: "Потоки"},
+            {title: "Robot", name: "Робот"},
+            {title: "Mine", name: "Мое"}
         ];
 
         $scope.subCategories = [];
@@ -30,7 +30,7 @@ edflow
         $rootScope.selectCategory = function (category) {
 
             console.log(category);
-            
+
             if (category.selected) {
 
                 $rootScope.items = [];
